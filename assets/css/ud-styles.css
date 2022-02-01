@@ -486,21 +486,21 @@ p {
   opacity: 1;
 }
 
-.sticky .navbar-btn .ud-main-btn.ud-login-btn {
+.sticky .navbar-button .ud-main-btn.ud-login-btn {
   color: var(--heading-color);
 }
 
-.sticky .navbar-btn .ud-main-btn.ud-login-btn:hover {
+.sticky .navbar-button .ud-main-btn.ud-login-btn:hover {
   color: var(--primary-color);
   opacity: 1;
 }
 
-.sticky .navbar-btn .ud-white-btn {
+.sticky .navbar-button .ud-white-btn {
   background: var(--primary-color);
   color: var(--white);
 }
 
-.sticky .navbar-btn .ud-white-btn:hover {
+.sticky .navbar-button .ud-white-btn:hover {
   background: var(--heading-color);
 }
 
