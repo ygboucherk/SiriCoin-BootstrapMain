@@ -450,20 +450,20 @@ p {
   }
 }
 
-.navbar-btn .ud-main-btn {
+.navbar-button .ud-main-btn {
   padding: 8px 16px;
   background: transparent;
 }
 
-.navbar-btn .ud-login-btn:hover {
+.navbar-button .ud-login-btn:hover {
   opacity: 0.5;
 }
 
-.navbar-btn .ud-white-btn {
+.navbar-button .ud-white-btn {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.navbar-btn .ud-white-btn:hover {
+.navbar-button .ud-white-btn:hover {
   background: white;
   color: var(--heading-color);
 }
@@ -486,21 +486,21 @@ p {
   opacity: 1;
 }
 
-.sticky .navbar-btn .ud-main-btn.ud-login-btn {
+.sticky .navbar-button .ud-main-btn.ud-login-btn {
   color: var(--heading-color);
 }
 
-.sticky .navbar-btn .ud-main-btn.ud-login-btn:hover {
+.sticky .navbar-button .ud-main-btn.ud-login-btn:hover {
   color: var(--primary-color);
   opacity: 1;
 }
 
-.sticky .navbar-btn .ud-white-btn {
+.sticky .navbar-button .ud-white-btn {
   background: var(--primary-color);
   color: var(--white);
 }
 
-.sticky .navbar-btn .ud-white-btn:hover {
+.sticky .navbar-button .ud-white-btn:hover {
   background: var(--heading-color);
 }
 
@@ -2610,4 +2610,20 @@ p {
     padding: 10px 20px;
   }
 }
+
+/* phone fix */
+
+@media (max-width: 767px)
+{
+    .sm-hidden
+    {
+        display: none !important;
+        opacity: 0 !important;
+    } 
+    .sm-show {
+        display: inline-block !important;
+        opacity: 1 !important;
+    }
+}
+
 /*# sourceMappingURL=ud-styles.css.map */
