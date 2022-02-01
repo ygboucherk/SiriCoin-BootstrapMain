@@ -22,6 +22,8 @@ const addToMetamask = () => {
 			}]
 		}).catch((error) => {
 			console.log(error)
+			let errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+			errorModal.show();
 		})
 	}
 }

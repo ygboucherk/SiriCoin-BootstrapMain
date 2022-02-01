@@ -29,6 +29,27 @@
 </head>
 
 <body>
+
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white" id="errorModalLabel">Error adding to metamask.</h5>
+          <button type="btn" class="close" onclick="bootstrap.Modal.getInstance(document.getElementById('errorModal')).hide()" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          The Server didn't respond properly<br/>
+          <b>Please try again later.</b>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" onclick="bootstrap.Modal.getInstance(document.getElementById('errorModal')).hide()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ====== Header Start ====== -->
   <header class="ud-header">
     <div class="container-fluid">
