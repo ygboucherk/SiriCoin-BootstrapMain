@@ -277,14 +277,15 @@
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".15s">
             <div class="content has-text-centered py-6 my-6">
-              <input class="input has-text-centered is-rounded" style="margin-bottom: 20px;" id="addressInput"
+              <input class="input has-text-centered is-rounded p-2" style="margin-bottom: 20px;" id="addressInput"
                 placeholder="Paste Your SiriCoin Address"></input>
-              <input type="number" class="input has-text-centered is-rounded" id="threadsInput"
-                placeholder="Threads"></input>
-              <button class="button is-warning  my-5 mb-4" id="Start"
+              <input type="number" class="input has-text-centered is-rounded p-2" id="threadsInput"
+                placeholder="Number of mining Threads"></input>
+              <p>Recommended threads: <script>document.write(`${navigator.hardwareConcurrency}`)</script></p>
+              <button class="btn minerbtn my-2 mb-4" id="Start"
                 onclick="startMining(document.getElementById('addressInput').value, Number(document.getElementById('threadsInput').value))"><strong>Start
                   Mining</strong></button>
-              <button class="button is-danger  my-5 mb-4" id="Stop" onclick="stopMining()"><strong>Stop
+              <button class="btn minerbtn my-2 mb-4" id="Stop" onclick="stopMining()"><strong>Stop
                   Mining</strong></button><br />
               <span>Mining Status :</span> <span id="miningstatus">Stopped</span><br />
               <span>Current balance :</span> <span id="currentbalance">Input SiriCoin address to see it</span>

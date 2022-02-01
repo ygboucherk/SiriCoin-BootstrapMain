@@ -2611,6 +2611,19 @@ p {
   }
 }
 
+/* some styles */
+
+.minerbtn {
+  color: white;
+  background-color: #3056d3;
+  transition: background-color 0.3s;
+}
+
+.minerbtn:hover {
+  background-color: rgb(88, 120, 219);
+  color: white;
+}
+
 /* medium fix */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px)
