@@ -25,11 +25,31 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/lineicons.css" />
   <link rel="stylesheet" href="assets/css/ud-styles.css" />
-  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
 
 <body>
+
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white" id="errorModalLabel">Error adding to metamask.</h5>
+          <button type="btn" class="close" onclick="bootstrap.Modal.getInstance(document.getElementById('errorModal')).hide()" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          The Server didn't respond properly<br/>
+          <b>Please try again later.</b>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" onclick="bootstrap.Modal.getInstance(document.getElementById('errorModal')).hide()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ====== Header Start ====== -->
   <header class="ud-header">
     <div class="container-fluid">
@@ -83,7 +103,7 @@
               </li>
             </ul>
 
-            <button class="navbar-toggler">
+            <button class="navbar-toggler mx-2">
               <span class="toggler-icon"> </span>
               <span class="toggler-icon"> </span>
               <span class="toggler-icon"> </span>
@@ -278,14 +298,15 @@
         <div class="col-lg-4 col-md-6 col-sm-10">
           <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".15s">
             <div class="content has-text-centered py-6 my-6">
-              <input class="input has-text-centered is-rounded" style="margin-bottom: 20px;" id="addressInput"
+              <input class="input has-text-centered is-rounded p-2" style="margin-bottom: 20px;" id="addressInput"
                 placeholder="Paste Your SiriCoin Address"></input>
-              <input type="number" class="input has-text-centered is-rounded" id="threadsInput"
-                placeholder="Threads"></input>
-              <button class="button is-warning  my-5 mb-4" id="Start"
+              <input type="number" class="input has-text-centered is-rounded p-2" id="threadsInput"
+                placeholder="Number of mining Threads"></input>
+              <p>Recommended threads: <script>document.write(`${navigator.hardwareConcurrency}`)</script></p>
+              <button class="btn minerbtn my-2 mb-4" id="Start"
                 onclick="startMining(document.getElementById('addressInput').value, Number(document.getElementById('threadsInput').value))"><strong>Start
                   Mining</strong></button>
-              <button class="button is-danger  my-5 mb-4" id="Stop" onclick="stopMining()"><strong>Stop
+              <button class="btn minerbtn my-2 mb-4" id="Stop" onclick="stopMining()"><strong>Stop
                   Mining</strong></button><br />
               <span>Mining Status :</span> <span id="miningstatus">Stopped</span><br />
               <span>Current balance :</span> <span id="currentbalance">Input SiriCoin address to see it</span>

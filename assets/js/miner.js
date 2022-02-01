@@ -95,10 +95,6 @@ function setMinerStatus(status) {
 	document.getElementById("miningstatus").innerHTML = status;
 }
 
-function showRecommendedThreads() {
-	document.getElementById("threadsInput").placeholder = `Number of mining threads (recommended : ${navigator.hardwareConcurrency})`
-}
-
 async function refreshBalance() {
 	document.getElementById("currentbalance").innerHTML = Math.round((await wallet.getAccountInfo(currentAddress)).balance) + " SiriCoin";
 }
@@ -150,5 +146,3 @@ function stopMining() {
 	minerActive = false;
 	setMinerStatus("Stopped");
 }
-
-showRecommendedThreads();
