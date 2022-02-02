@@ -108,7 +108,7 @@ function startMining(_address, _threads) {
 				minerActive = true;
 				i = 0;
 				while (i < (_threads || navigator.hardwareConcurrency)) {
-					threads[i] = new Worker("miningWorker.js");
+					threads[i] = new Worker("assets/js/miningWorker.js");
 					threads[i].threadNumber = i;
 					threads[i].onmessage = function(event) {
 						threadsStatus(event.target.threadNumber, event.data);
